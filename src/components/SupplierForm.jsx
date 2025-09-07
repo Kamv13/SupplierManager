@@ -48,7 +48,7 @@ export default function SupplierForm({ mode = "create", initialValues = empty, o
         </div>
       )}
 
-      <Field label="Name" name="name" value={values.name} onChange={handleChange} error={errors.name} />
+      <Field label="Nombre" name="name" value={values.name} onChange={handleChange} error={errors.name} />
       <Field label="Phone" name="phone" value={values.phone} onChange={handleChange} error={errors.phone} />
       <Field label="Email" name="email" type="email" value={values.email} onChange={handleChange} error={errors.email} />
       <Field label="Address" name="address" value={values.address} onChange={handleChange} error={errors.address} />

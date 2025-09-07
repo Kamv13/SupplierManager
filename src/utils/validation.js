@@ -1,14 +1,13 @@
 export function validateSupplier(values) {
   const errors = {};
 
-  if (values.name === undefined || values.name === null || values.name.trim() === "") {
+  if (!values.name || values.name.trim() === "") {
     errors.name = "Name is required.";
   } else if (values.name.trim().length < 4) {
     errors.name = "Name must be at least 4 characters.";
   }
 
-
-  if (values.phone === undefined || values.phone === null || values.phone.trim() === "") {
+  if (!values.phone || values.phone.trim() === "") {
     errors.phone = "Phone is required.";
   } else if (values.phone.trim().length < 8) {
     errors.phone = "Phone must be at least 8 characters.";
@@ -16,7 +15,7 @@ export function validateSupplier(values) {
     errors.phone = "Phone must be at most 8 characters.";
   }
 
-  if (values.email === undefined || values.email === null || values.email.trim() === "") {
+  if (!values.email || values.email.trim() === "") {
     errors.email = "Email is required.";
   } else if (values.email.trim().length < 8) {
     errors.email = "Email must be at least 8 characters.";
@@ -24,10 +23,9 @@ export function validateSupplier(values) {
     errors.email = "Email must be at most 24 characters.";
   }
 
-  if (values.address === undefined || values.address === null || values.address.trim() === "") {
+  if (!values.address || values.address.trim() === "") {
     errors.address = "Address is required.";
   }
-
 
   if (
     (!values.name || values.name.trim() === "") &&
